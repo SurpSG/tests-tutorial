@@ -5,15 +5,15 @@ plugins {
     id("org.springframework.boot") version "3.1.4"
     id("io.spring.dependency-management") version "1.1.3"
 
-    `jvm-test-suite`
     `java-test-fixtures`
+    id("io.github.surpsg.delta-coverage") version "1.2.0"
 }
 
 group = "com.tests"
 version = "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_19
+    sourceCompatibility = JavaVersion.VERSION_18
 }
 
 repositories {
@@ -46,31 +46,11 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-testing.suites {
-//
-//    val test by getting(JvmTestSuite::class) {
-//        useJUnitJupiter()
-//        dependencies {
-//            implementation("com.willowtreeapps.assertk:assertk:0.27.0")
-//            implementation("io.mockk:mockk:1.13.8")
-//
-//            implementation("io.projectreactor:reactor-test")
-//            implementation("org.awaitility:awaitility:4.2.0")
-//        }
-//    }
-//
-//    register<JvmTestSuite>("integrationTest") {
-//        useJUnitJupiter()
-//        dependencies {
-//            implementation(project())
-//            implementation("com.willowtreeapps.assertk:assertk:0.27.0")
-//
-//            implementation("org.springframework.boot:spring-boot-starter-test")
-//
-//            implementation("io.projectreactor:reactor-test")
-//            implementation("org.awaitility:awaitility:4.2.0")
-//        }
-//    }
+configure<io.github.surpsg.deltacoverage.gradle.DeltaCoverageConfiguration> {
+    diffSource.git.compareWith("master")
+
+    violationRules.failIfCoverageLessThan(0.9)
+    reports {
+        html.set(true)
+    }
 }
-
-

@@ -1,5 +1,6 @@
 package com.example.demo.elementary.tests
 
+import java.lang.Math.random
 import kotlin.reflect.full.functions
 
 fun divide(
@@ -44,36 +45,7 @@ class TestSuite {
     }
     /*
 
-    1. Elementary test
-       - always check whether it works
-    2. Test suite
-    3. Custom testing framework
-    4. JUnit 5
-        - Annotations
-          * parameterized
-          * TestInstance
-          * Execution
-          * befeoreEach, afterAll, etc
-        - extensions
-        - Culture in tests
-            * naming convention
-            * one test - one action. Multiple assertions are allowed.
-            * given-when-then/arrange-act-assert
-    5. Assertion lib
-       - correct assertion: expected vs actual
-       - assertk, assertJ, kotest
-    6. Culture in tests
-        - no logic in tests
-        - ASAP tests. Inheritance in tests.
-        - DRY in tests
 
-
-    X. mocks/stubs/fakes
-       - mockito, mockk, powermock
-    X. Test fixtures
-    X. Test coverage
-    X. setup live template
-    X. Flaky tests
      */
 }
 
