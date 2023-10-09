@@ -1,6 +1,5 @@
 package com.example.demo.elementary.tests
 
-import java.lang.Math.random
 import kotlin.reflect.full.functions
 
 fun divide(
@@ -43,9 +42,5 @@ class TestSuite {
 
         assert(actual == 4) { "Expected 4, but got $actual" }
     }
-    /*
-
-
-     */
 }
 
