@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+
+  mongo:
+#    image: mongo:6.0.4
+    build:
+        context: .
+        dockerfile: Dockerfile
+    container_name: mongo
+    environment:
+      MONGO_DATABASE: testic
+      MONGO_INITDB_ROOT_USERNAME: test
+      MONGO_INITDB_ROOT_PASSWORD: test
+    ports:
+      - '27017:27017'
