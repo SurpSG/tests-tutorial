@@ -1,10 +1,8 @@
 package com.tests.demo.employee.repository
 
-import com.tests.demo.employee.domain.Department
 import com.tests.demo.employee.domain.Employee
 import com.tests.demo.employee.repository.model.MongoDepartment
 import com.tests.demo.employee.repository.model.MongoEmployee
-import org.springframework.data.mongodb.core.MongoTemplate
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
@@ -26,9 +24,6 @@ class EmployeeRepository(
         val query = Criteria.where("name").`is`(name).let(::Query)
         return mongoTemplate.find(query, MongoEmployee::class.java)
             .map { it.toDomainEmployee() }
-            .doOnNext {
-                println(it)
-            }
     }
 
     private fun Employee.toMongoEmployee() = MongoEmployee(

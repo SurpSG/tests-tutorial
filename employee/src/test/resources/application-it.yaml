@@ -1,0 +1,8 @@
+spring.data.mongodb:
+  uri: mongodb://test:test@localhost:27017/testic?authSource=admin
+
+logging:
+  level:
+    org.springframework.core: DEBUG
+
+debug: true
