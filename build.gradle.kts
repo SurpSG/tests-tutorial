@@ -35,8 +35,10 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
 
-//    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-//    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("io.nats:jnats:2.16.14")
 //    testImplementation("com.willowtreeapps.assertk:assertk:0.27.0") // https://github.com/ajax-systems/testing-libs-for-kotlin
 //    testImplementation("io.mockk:mockk:1.13.8")
 //    testImplementation("org.awaitility:awaitility:4.2.0")

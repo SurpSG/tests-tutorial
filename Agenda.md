@@ -1,3 +1,5 @@
+
+===============================
 1. Elementary test
    - always check whether it works
     2. Test suite
@@ -26,7 +28,18 @@
 3. mocks/stubs/fakes
    - mockito, mockk, powermock
 
-    X. Test fixtures
-    X. Test coverage
-    X. setup live template
-    X. Flaky tests
+===============================
+Integration tests
+1. Repository
+2. HTTP controller
+3. NATS
+
+===============================
+E2E tests
+
+===============================
+Bonus
+1. Test fixtures
+2. Test coverage
+3. setup live template
+4. Flaky tests

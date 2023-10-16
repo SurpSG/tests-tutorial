@@ -9,10 +9,10 @@ import org.springframework.test.context.ContextConfiguration
 @WebFluxTest
 @ContextConfiguration(
     classes = [
-        ControllerTest.ControllerComponentScan::class,
+        RestControllerTest.ControllerComponentScan::class,
     ]
 )
-annotation class ControllerTest {
+annotation class RestControllerTest {
 
     @ComponentScan(
         value = [

@@ -34,13 +34,15 @@ dependencies {
     implementation("io.projectreactor:reactor-core")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 
+    implementation("io.nats:jnats:2.16.14")
+
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+    testImplementation("org.awaitility:awaitility:4.2.0")
 }
 
 tasks.withType<Test> {

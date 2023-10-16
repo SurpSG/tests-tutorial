@@ -14,7 +14,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.test.web.reactive.server.WebTestClient
 import reactor.core.publisher.Flux
 
-@ControllerTest
+@RestControllerTest
 class EmployeeControllerTest {
 
     @MockBean

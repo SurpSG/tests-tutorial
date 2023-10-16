@@ -3,7 +3,6 @@ version: "3.9"
 services:
 
   mongo:
-#    image: mongo:6.0.4
     build:
         context: .
         dockerfile: Dockerfile
@@ -14,3 +13,9 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: test
     ports:
       - '27017:27017'
+
+  nats:
+    image: nats:2.9.23
+    container_name: nats
+    ports:
+      - "4222:4222"
