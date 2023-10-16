@@ -9,6 +9,14 @@ plugins {
     `java-test-fixtures`
 }
 
+tasks.bootJar {
+    enabled = false
+}
+
+tasks.jar {
+    enabled = true
+}
+
 java {
     sourceCompatibility = JavaVersion.VERSION_18
 }
@@ -21,6 +29,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.3")
 
     implementation("io.projectreactor:reactor-core")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")

@@ -21,7 +21,7 @@ class EmployeeService(
     fun findByName(name: String): Flux<Employee> {
         log.info("Finding employee by name: {}", name)
         return if (name.compareTo("petro", true) == 0) {
-            PetroNonGrataException("$name is not allowed here! $name go fuck yourself").toFlux()
+            PetroNonGrataException("$name is not allowed here! $name go away!").toFlux()
         } else {
             employeeRepository.findByName(name)
         }
