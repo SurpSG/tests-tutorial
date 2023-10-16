@@ -41,5 +41,3 @@ tasks.withType<JacocoReport> {
         html.required.set(true)
     }
 }
-
-

@@ -6,14 +6,11 @@ import io.nats.client.Message
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.test.context.ActiveProfiles
 import java.time.Duration
 import java.util.concurrent.CompletableFuture
 
-@ActiveProfiles("e2e")
-@SpringBootTest
+@E2ETest
 class GetEmployeeNatsControllerE2E {
 
     @Autowired
@@ -25,7 +22,7 @@ class GetEmployeeNatsControllerE2E {
     @Test
     fun `should return success result`() {
         // GIVEN
-        val allowedName = "E2E test allowed name"
+        val allowedName = "E2E test allowed name ${System.nanoTime()}"
         mongoTemplate.save(MongoEmployee(allowedName, 0.0, null)).block()
 
         // WHEN

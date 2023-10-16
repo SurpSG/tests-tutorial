@@ -3,19 +3,11 @@ package com.example.demo.elementary.tests
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.TestInstance
-import org.junit.jupiter.api.Timeout
-import org.junit.jupiter.api.extension.ExtendWith
-import org.junit.jupiter.api.parallel.Execution
-import org.junit.jupiter.api.parallel.ExecutionMode
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
-import org.junit.jupiter.params.provider.ValueSource
-import java.util.concurrent.TimeUnit
 import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.thread
 
-@ExtendWith
 class MathUtilsTest {
 
     @Test
@@ -43,7 +35,7 @@ class MathUtilsTest {
         lock.lock()
     }
 
-//    @Disabled("reason here. when it well be fixed, linked ticket")
+//    @Disabled("reason here. when it will be fixed, linked ticket")
     @ParameterizedTest
     @CsvSource(
         "DOWN, 1, 2, 0",

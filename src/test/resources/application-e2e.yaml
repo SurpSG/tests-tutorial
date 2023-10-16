@@ -6,5 +6,4 @@ nats.connection.url: nats://localhost:4222
 logging:
   level:
     org.springframework.core: DEBUG
-
-debug: true
+    org.springframework.test.context.cache: DEBUG

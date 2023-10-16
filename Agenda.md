@@ -33,10 +33,12 @@ Integration tests
 1. Repository
 2. HTTP controller
 3. NATS
+4. Spring context cache logging
+5. Gradle tests logging
 
 ===============================
 E2E tests
-
+1. ResourceLock
 ===============================
 Bonus
 1. Test fixtures
