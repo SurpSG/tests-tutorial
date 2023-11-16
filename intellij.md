@@ -60,6 +60,7 @@
 ## Code
 
 - Forward, backward: `cmnd + alt + →`,`cmnd + alt + ←`
+- Find usages: `opt + F7`
 - Go to declaration: `cmnd + b`
 - (When on a declaration) Show usages: `cmnd + b`
 - Declaration info: `F1`
